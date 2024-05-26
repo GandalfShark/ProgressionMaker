@@ -30,7 +30,7 @@ def create_list_of_progs():
         sublist = []
 
         hook = input("Start on the 1 chord? (default is no)  y/n  >>>  ").strip().lower()
-        current_num = random.randint(1, 7)
+        current_num = random.randint(2, 7)
         if hook == 'y':
             current_num = 1
 
