@@ -1,5 +1,5 @@
 """
-Simple program that generates 10 random chord progressions in a given minor key
+Simple program that generates 5 random chord progressions in a given minor key
 it follows basic songwriting rules for chord progressions
 the progressions are between 3 and 5 chords long
 """
