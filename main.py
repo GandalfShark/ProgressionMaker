@@ -26,7 +26,7 @@ def create_list_of_progs():
         7: [3, 4]
     }
     result = []
-    for _ in range(5):  # Generating 10 lists
+    for _ in range(5):
         sublist = []
 
         hook = input("Start on the 1 chord? (default is no)  y/n  >>>  ").strip().lower()
