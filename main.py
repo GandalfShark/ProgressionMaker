@@ -2,6 +2,15 @@
 Simple program that generates 5 random chord progressions in a given minor key
 it follows basic songwriting rules for chord progressions
 the progressions are between 3 and 5 chords long
+
+Ideas for improvement:
+
+1) randomised chord substitutions ie: major 5 instead of minor 5
+
+2) recognising characteristic chords of chosen keys
+   Ie: Dm has Dm and Bb so it won't sound like C major
+
+3) List the notes of the scale for convince
 """
 import random
 import art
@@ -19,13 +28,22 @@ def create_list_of_progs():
     rules = {
         1: [num for num in range(2, 8)],
         2: [7, 5],
-        3: [4],
-        4: [2, 7],
-        5: [6, 1],
+        3: [4, 2, 6],
+        4: [2, 7, 3, 1],
+        5: [6, 7, 1],
         6: [4, 2],
-        7: [3, 4]
+        7: [3, 4, 6]
     }
     result = []
+
+    skip_diminshed = input("Skip diminished chords? (y/n): ").strip().lower()
+    if skip_diminshed == 'y':
+        for rule in rules:
+            try:
+                rules[rule].remove(2)
+            except ValueError:
+                pass
+
     for _ in range(5):
         sublist = []
 
