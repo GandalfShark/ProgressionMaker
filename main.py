@@ -5,12 +5,12 @@ the progressions are between 3 and 5 chords long
 
 Ideas for improvement:
 
-1) randomised chord substitutions ie: major 5 instead of minor 5
-
-2) recognising characteristic chords of chosen keys
+1) recognising characteristic chords of chosen keys
    Ie: Dm has Dm and Bb so it won't sound like C major
 
-3) List the notes of the scale for convince
+2) List the notes of the scale for convince
+
+3) Add option for major keys
 """
 import random
 import art
@@ -74,7 +74,12 @@ def get_value_from_dict(dictionary, key):
 def numbers_in_chords(list_input, dict):
     for item in list_input:
         new_list = []
+        substitutable_chords = [5]
         for number in item:
+            if number in substitutable_chords:
+                sub_it = input(f'Substitute the {number} chord? y/n  >>>  ').strip().lower()
+                if sub_it == 'y':
+                    number = number * 7
             new_list.append(dict[number])
         print_yellow(str(new_list).replace('[', '').replace(']', '').replace("'", ''))
 
