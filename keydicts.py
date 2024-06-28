@@ -2,7 +2,7 @@
 Minor keys dict that links to chord names
 chord subs are key * 2
 """
-
+# TODO: add sub for b2 major from dim
 Cm ={
     1 : 'Cm',
     2 : 'Ddmim',

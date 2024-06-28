@@ -11,6 +11,8 @@ Ideas for improvement:
 2) List the notes of the scale for convince
 
 3) Add option for major keys
+
+4) GUI?
 """
 import random
 import art
@@ -74,7 +76,7 @@ def get_value_from_dict(dictionary, key):
 def numbers_in_chords(list_input, dict):
     for item in list_input:
         new_list = []
-        substitutable_chords = [5]
+        substitutable_chords = [5, 2]
         for number in item:
             if number in substitutable_chords:
                 sub_it = input(f'Substitute the {number} chord? y/n  >>>  ').strip().lower()
